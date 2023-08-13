@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset some default styles */
+        body, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Burger menu styles */
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 3px 0;
+        }
+
+        /* Container styles */
+        .container {
+            background: url('https://img.freepik.com/free-vector/colourful-dynamic-flow-background_52683-42964.jpg?w=1060&t=st=1691945513~exp=1691946113~hmac=5bb9e3ef3f5a8b628b78c44f63ec8471fa247c0ec831435d001af5d68e9b73fb') center/cover no-repeat;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        /* Button container styles */
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #333;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .pink-button {
+            background-color: pink;
+            border: 2px solid pink;
+            padding: 8px 18px;
+        }
+
+        /* Grid container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .grid-item {
+            background-color: #E862F5;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            width: 462px;
+            height: 432px;
+            font-size: 24px;
+        }
+
+        .grid-item.white {
+            background-color: white;
+            color: pink;
+        }
+
+        .grid-item.blue {
+            background-color: babyblue;
+            color: white;
+        }
+
+        .grid-item.purple {
+            background-color: white;
+            color: purple;
+        }
+
+        .grid-item.pink {
+            background-color: pink;
+            color: white;
+        }
+
+        .grid-item.lightblue {
+            background-color: white;
+            color: babyblue;
+        }
+
+        /* Social media buttons */
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-button {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+        }
+
+        .instagram-button {
+            background-image: url('https://w7.pngwing.com/pngs/274/823/png-transparent-icon-essential-instagram-2016-app-logo-vector-images-social-networks-thumbnail.png');
+        }
+
+        .facebook-button {
+            background-image: url('https://img.freepik.com/premium-vector/blue-social-media-logo_197792-1759.jpg');
+        }
+
+        /* Media query for responsive design */
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                width: 100%;
+                top: 70px;
+                left: 0;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .burger {
+                display: flex;
+            }
+        }
+    </style>
+    <title>Responsive Navbar</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">Logo</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 style="font-size: 50px;">The key to unlocking your business success!</h1>
+    </div>
+
+    <div class="button-container">
+        <button class="button">What we do</button>
+        <button class="button">Our Principles</button>
+        <button class="button">Projects</button>
+        <button class="button pink-button">Amazing Team</button>
+        <button class="button">Learn More</button>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <p>ANTI-CRISIS</p>
+        </div>
+        <div class="grid-item white">
+            <p>Startups</p>
+        </div>
+        <div class="grid-item blue">
+            <p>Marketing</p>
+        </div>
+        <div class="grid-item white purple">
+            <p>Consultations</p>
+        </div>
+        <div class="grid-item pink">
+            <p>Strategy</p>
+        </div>
+        <div class="grid-item white lightblue">
+            <p>Investment</p>
+        </div>
+    </div>
+
+    <div class="social-buttons">
+        <a href="#" class="social-button instagram-button"></a>
+        <a href="#" class="social-button facebook-button"></a>
+    </div>
+
+    <script>
+        const burger = document.querySelector(".burger");
+        const navLinks = document.querySelector(".nav-links");
+
+        burger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
